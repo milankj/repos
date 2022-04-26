@@ -28,10 +28,3 @@ let randomObject = dummy(model, {
   returnDate: true,
 });
 console.log(JSON.stringify(randomObject));
-
-// {
-//   "username":"Johathan93",
-//   "email":"Blaze46@yahoo.com",
-//   "fullName":"Annie.Lang67",
-//   "password":"AdrienDurgan0.16949459101150532_"
-// }
