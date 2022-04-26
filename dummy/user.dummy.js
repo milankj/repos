@@ -3,7 +3,7 @@ const dummy = require("mongoose-dummy");
 
 const ignoredFields = ["_id", "__v"];
 let schemaDefinition = new mongoose.Schema({
-  uId: {
+  username: {
     type: String,
     unique: true,
     required: true,
@@ -30,7 +30,7 @@ let randomObject = dummy(model, {
 console.log(JSON.stringify(randomObject));
 
 // {
-//   "uId":"Johathan93",
+//   "username":"Johathan93",
 //   "email":"Blaze46@yahoo.com",
 //   "fullName":"Annie.Lang67",
 //   "password":"AdrienDurgan0.16949459101150532_"
