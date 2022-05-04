@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require("morgan")
 const dotenv = require('dotenv')
+const globalErrorHandler = require('./src/utils/globalError')
 const cors = require("cors");
 const InitiateMongoServer = require('./db')
 
@@ -22,8 +23,7 @@ app.use(express.json())
 
 app.use("/api/v1/user", userRouter);
 app.use('/*', rootRouter)
-
-
+app.use(globalErrorHandler)
 dotenv.config({ path: './.env' })
 const port = process.env.PORT || 3000
 

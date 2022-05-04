@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  station_name:String,
+  role:{
+    type:String,
+    required:true
   }
 });
 
